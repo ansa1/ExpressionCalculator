@@ -1,7 +1,7 @@
 # ExpressionCalculator
 
 Takes an expression from the input, and produce
-the result of calculations considering the precedence of operators:
+the result of calculations considering the precedence of operators (and parentheses, of course):
 1. Factor (*)
 2. Term (+ -)
 3. Relation (< > =)
