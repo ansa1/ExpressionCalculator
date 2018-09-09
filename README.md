@@ -4,7 +4,7 @@ Takes an expression from the input, and produce
 the result of calculations considering the precedence of operators:
 1. Factor (*)
 2. Term (+ -)
-3. Relation < > =)
+3. Relation (()< > =)
 
 
 ## Dependencies
