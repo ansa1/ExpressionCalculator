@@ -29,11 +29,10 @@ To run the program the following commands should be used in the project root dir
 <br/>
 `java -jar ExpressionCalculator-1.0-SNAPSHOT.jar`
 
-After that the implemented JUnit4 tests will be invoked and 
-the calculations results will be written to `./data/out.txt` line by line 
-based on the provided input expressions in `./data/in.txt`.  
+After that the calculations results will be written to `./data/out.txt` 
+line by line based on the provided input expressions in `./data/in.txt`.  
 
-In order to run only the tests you can simply use:
+In order to run only the implemented JUnit tests you can simply use:
 
 
 `mvn test` 
