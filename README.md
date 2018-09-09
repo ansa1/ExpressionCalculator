@@ -10,7 +10,7 @@ the result of calculations considering the precedence of operators (and parenthe
 
 ## Dependencies
 
-to be able to build and run the application you are supposed to have the following software installed:
+To be able to build and run the application you are supposed to have the following software installed:
 
  * Oracle JDK 8 ver. 181
  * Maven ver. 3.5.4  
@@ -20,9 +20,6 @@ to be able to build and run the application you are supposed to have the followi
 
 
 ## How to run
-
-Main Class is Program.java.
-
 
 To run the program the following commands should be used in the project root directory:
 
