@@ -9,11 +9,14 @@ the result of calculations considering the precedence of operators (and parenthe
 
 ## Dependencies
 
-The project programming language is Java 8. 
-Main Class is Program.java. 
+The project programming language is Java 8. Thus, to be enable to build and run the application you are supposed to have Java jdk1.8 
+and jre1.8 installed and the appropriate environment variables set.
 
 
 ## How to run
+
+Main Class is Program.java.
+
 
 To run the program the following commands should be used in the root project directory:
 
