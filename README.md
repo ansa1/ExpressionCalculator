@@ -21,7 +21,12 @@ To be able to build and run the application you are supposed to have the followi
 
 ## How to run
 
-To run the program the following commands should be used in the project root directory:
+To run the program you can use the following scripts:
+
+* `run.bat` for Windows OS
+* `run.sh` for Unix based OS 
+
+Or you can type the following commands by yourself in the project root directory:
 
 `mvn package`
 <br/>
@@ -40,5 +45,5 @@ In order to run only the implemented JUnit tests you can simply use:
 ## Accuracy
 
 Inaccuracy of calculations is expected in case of operations on integers which are beyond 
-java.lang.Long boundaries ( a minimum value of -263 and a maximum value of 263-1), since
+java.lang.Long boundaries ( a minimum value of -2^63 and a maximum value of 2^63-1), since
 the ExpressionCalculator is intended to be used only with integers for the time being. 
