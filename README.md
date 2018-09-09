@@ -10,7 +10,7 @@ the result of calculations considering the precedence of operators (and parenthe
 
 ## Dependencies
 
-Thus, to be enable to build and run the application you are supposed to have the following software installed:
+to be able to build and run the application you are supposed to have the following software installed:
 
  * Oracle JDK 8 ver. 181
  * Maven ver. 3.5.4  
@@ -37,6 +37,8 @@ the calculations results will be written to `./data/out.txt` line by line
 based on the provided input expressions in `./data/in.txt`.  
 
 In order to run only the tests you can simply use:
+
+
 `mvn test` 
 
 ## Accuracy
