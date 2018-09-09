@@ -7,13 +7,13 @@ the result of calculations considering the precedence of operators:
 3. Relation < > =)
 
 
-##Dependencies
+## Dependencies
 
 The project programming language is Java 8. 
 Main Class is Program.java. 
 
 
-##How to run
+## How to run
 
 To run the program the following commands should be used in the root project directory:
 
@@ -22,7 +22,7 @@ To run the program the following commands should be used in the root project dir
 `java Program`
 
 
-#Accuracy
+## Accuracy
 
 Inaccuracy of calculations is expected in case of operations on integers which are beyond 
 java.lang.Long boundaries ( a minimum value of -263 and a maximum value of 263-1), since
