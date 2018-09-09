@@ -1,8 +1,7 @@
 public class Program {
 
-    public static final String dataPath = "../data/";
-    public static final String inputFile = dataPath + "in.txt";
-    public static final String outputFile = dataPath + "out.txt";
+    public static final String inputFile = "../in.txt";
+    public static final String outputFile = "../out.txt";
 
     /*
      Launches the Expression Calculator which reads the input file line by line and writes to the output file line by line.
