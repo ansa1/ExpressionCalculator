@@ -3,7 +3,6 @@ public class Factor extends Expression {
 
     // String constants
     public static final String multS = "*";
-    public static final String divS = "/";
     public static final String noneS = "none";
 
     private Expression left, right;
@@ -55,21 +54,17 @@ public class Factor extends Expression {
         switch (node) {
             case mult:
                 return leftL * rightL;
-            case div:
-                return leftL / rightL;
         }
         return 0;
     }
 
     enum Opcode {
-        mult, div, none;
+        mult, none;
 
         public String getOp() {
             switch (this) {
                 case mult:
                     return multS;
-                case div:
-                    return divS;
             }
             return noneS;
         }

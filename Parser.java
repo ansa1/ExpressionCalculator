@@ -13,41 +13,8 @@ public class Parser {
      Starts parsing the input expression.
      */
     public Expression parse() {
-        return parseLogicalFirst();
+        return parseRelation();
     }
-
-    /*
-     Parses Logical Operators.
-        Firstly, and.
-     */
-    private Expression parseLogicalFirst() {
-        Expression result = parseLogicalSecond();
-        while (true) {
-            Logical.Opcode op = parseLogOperator(false);
-            if (op != Logical.Opcode.none) {
-                Expression right = parseLogicalSecond();
-                result = new Logical(op, result, right);
-            } else break;
-        }
-        return result;
-    }
-
-    /*
-     Continues parsing Logical Operators.
-        Now or, xor.
-     */
-    private Expression parseLogicalSecond() {
-        Expression result = parseRelation();
-        while (true) {
-            Logical.Opcode op = parseLogOperator(true);
-            if (op != Logical.Opcode.none) {
-                Expression right = parseRelation();
-                result = new Logical(op, result, right);
-            } else break;
-        }
-        return result;
-    }
-
 
     /*
      Parses Relation Operators.
@@ -163,30 +130,6 @@ public class Parser {
         return input.charAt(counter);
     }
 
-    /**
-     * Finds Logical Operators.
-     *
-     * @param flag if true deals with and, otherwise -  xor and or.
-     *             This flag is used for the priority in Logical Operators:
-     *             and has higher one than xor, or.
-     */
-    private Logical.Opcode parseLogOperator(boolean flag) {
-        int size, limit;
-        Logical.Opcode opcodes[];
-        if (flag) opcodes = new Logical.Opcode[]{Logical.Opcode.and};
-        else opcodes = new Logical.Opcode[]{Logical.Opcode.xor, Logical.Opcode.or};
-
-        for (Logical.Opcode opcode : opcodes) {
-            size = opcode.getOp().length();
-            limit = counter + size;
-            if (limit < length && input.substring(counter, limit).equals(opcode.getOp())) {
-                increment(size);
-                return opcode;
-            }
-        }
-        return Logical.Opcode.none;
-    }
-
     /*
      Finds Relation Operators.
      */
@@ -226,7 +169,7 @@ public class Parser {
      */
     private Factor.Opcode parseFacOperator() {
         int size, limit;
-        Factor.Opcode opcodes[] = {Factor.Opcode.mult, Factor.Opcode.div};
+        Factor.Opcode opcodes[] = {Factor.Opcode.mult};
         for (Factor.Opcode opcode : opcodes) {
             size = opcode.getOp().length();
             limit = counter + size;
