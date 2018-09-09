@@ -1,7 +1,5 @@
-/out.txt
-.out/
+/data/out.txt
 .idea/
 *.iml
-/input.txt
-/in11.txt
 *.class
+.target/

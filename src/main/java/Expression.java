@@ -3,6 +3,10 @@ abstract class Expression {
 
     abstract String toJSON(int level);
 
+    public String toJSONInline(int level) {
+        return toJSON(level).replace("\n", "").replace("\t", "");
+    }
+
     /**
      * Tabs required for convenient json representation.
      *
